@@ -1,0 +1,25 @@
+DB상 뭘 넣을지 리스트 : 속성은 value값, 관계는 연관된 데이터들 목록
+
+사용자(User) 모델:
+	속성: ID, 이름, 이메일, 비밀번호 등
+	관계: 사용자가 생성한 일정(UserSchedule), 사용자가 작성한 리뷰(UserReview) 등
+
+일정(Schedule) 모델:
+	속성: ID, 제목, 날짜, 시간, 위치(음식점 및 카페), 사용자 ID 등
+	관계: 사용자(User), 음식점(Restaurant), 카페(Cafe)
+
+음식점(Restaurant) 모델:
+	속성: ID, 이름, 주소, 평점 등
+	관계: 일정(Schedule), 리뷰(Review)
+
+카페(Cafe) 모델:
+	속성: ID, 이름, 주소, 평점 등
+	관계: 일정(Schedule), 리뷰(Review)
+
+리뷰(Review) 모델:
+	속성: ID, 내용, 평점, 작성일 등
+	관계: 사용자(User), 음식점(Restaurant), 카페(Cafe)
+
+위치(Location) 모델:
+	속성: ID, 이름, 주소, 위도, 경도 등
+	관계: 일정(Schedule)

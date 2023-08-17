@@ -22,7 +22,7 @@ $('.message a').click(function(){
   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
 
-// 다른 영역 클릭 시 숨김처리
+// 로그인 창 block 상태에서 다른 영역 클릭 시 숨김처리
 $(document).on('click', (e) => {
   if (
     !$form.is(e.target) && $form.has(e.target).length === 0 &&

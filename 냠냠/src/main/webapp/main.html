@@ -3,13 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>메인 페이지</title>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="assets/css/mainStyle.css">
+  <title>Document</title>
 </head>
 <body>
-  <div id="map" style="width:100%;height:40%;"></div>
+  <ul class="menu">
 
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ae6201bf8da4c7aa184f362e59a553f5"></script>
+    <li title="home"><a href="#" class="menu-button home">menu</a></li>
+    
+    <li title="검색"><a href="#" class="search">검색</a></li>
+    <li title="메모하기"><a href="#" class="pencil">메모하기</a></li>
+    <li title="마이페이지"><a href="#" class="active about">마이페이지</a></li>
+    <li title="찜 목록"><a href="#" class="archive">찜 목록</a></li>
+  </ul>
   
-  <script src="mainMap.js"></script>
+  <ul class="menu-bar">
+      <li><a href="#" class="menu-button">Menu</a></li>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">메인</a></li>
+      <li><a href="#">마이페이지</a></li>
+      <li><a href="#">공유하기</a></li>
+  </ul>
+
+  <script src="app.js"></script>
 </body>
 </html>

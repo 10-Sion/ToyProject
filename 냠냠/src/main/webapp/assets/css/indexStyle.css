@@ -33,7 +33,7 @@
   margin-bottom: 15%;
 }
 
-.firstDiv button {
+.firstDiv .startBtn {
   width: 150px;
   height: 50px;
   background-color: #f99898;
@@ -291,6 +291,7 @@ li {
   font-size: 1.2em;
   letter-spacing: 2px;
 }
+
 
 /* 숨김처리용 */
 .hidden {

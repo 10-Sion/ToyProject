@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* firstDiv, secondDiv, thirdDiv */
+.firstDiv,
+.secondDiv,
+.thirdDiv {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+/* firstDiv */
+.firstDiv {
+  position: relative;
+  text-align: center;
+}
+
+.firstDiv h1 {
+  font-size: 7rem;
+  margin-bottom: 5%;
+}
+
+.firstDiv h2 {
+  font-size: 3.5rem;
+  margin-bottom: 15%;
+}
+
+.firstDiv button {
+  width: 150px;
+  height: 50px;
+  background-color: #f99898;
+  border: none;
+  font-size: 1.3rem;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.firstDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/main.jpg") no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.secondDiv {
+  display: flex;
+  flex-direction: row; 
+  background: #444;
+  justify-content: space-between; 
+  overflow: hidden;
+}
+
+/* Left section */
+.left-section,
+.right-section {
+  flex: 1; 
+  padding: 20px;
+  box-sizing: border-box; 
+  overflow: hidden;
+  
+}
+
+.left-section img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.secondDiv .right-section {
+  padding-left: 5%; 
+  text-align: left; 
+}
+
+.secondDiv h2,
+.secondDiv h4 {
+  padding: 20px;
+}
+
+.thirdDiv {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0;
+  justify-items: center;
+  align-content: start;
+  margin-top: 13%;
+}
+
+.thirdDiv h2 {
+  text-align: center;
+  bottom: 65%;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  position: relative; 
+  z-index: 2; 
+}
+
+.thirdDiv .imageSection {
+  width: 100%;
+  padding-bottom: 75%;
+  position: relative;
+  overflow: hidden;
+}
+
+.thirdDiv .imageSection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thirdDiv .imageSection h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 15px 0 5px;
+  font-size: 1.2rem;
+  padding: 0;
+}
+
+.nav-list,
+.nav-member {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.nav-member {
+  margin-left: auto;
+}
+
+nav .second-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-member {
+  margin-left: 20px; 
+}
+
+footer {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* 로그인 폼 */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.login {
+  width: 30%;
+  height: 600px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  margin-left: 35%;
+  z-index: 1;
+}
+
+.login h2 {
+  color: rgb(47, 47, 47);
+  font-size: 2em;
+}
+.login_sns {
+  padding: 20px;
+  display: flex;
+}
+
+.login_sns li {
+  padding: 0px 15px;
+}
+
+.login_sns a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50px;
+  background: white;
+  font-size: 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4), -3px -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login_id {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.login_id input {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.login_pw {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.login_pw input {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.login_etc {
+  padding: 10px;
+  width: 80%;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.submit {
+  margin-top: 50px;
+  width: 80%;
+}
+.submit input {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  background: linear-gradient(to left, rgb(106, 106, 106), rgb(237, 237, 237));
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+/* 숨김처리용 */
+.hidden {
+  display: none;
+}
+

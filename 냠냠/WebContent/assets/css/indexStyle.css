@@ -1,0 +1,269 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* firstDiv, secondDiv, thirdDiv */
+.firstDiv,
+.secondDiv,
+.thirdDiv {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+/* firstDiv */
+.firstDiv {
+  position: relative;
+  text-align: center;
+}
+
+.firstDiv h1 {
+  font-size: 7rem;
+  margin-bottom: 5%;
+}
+
+.firstDiv h2 {
+  font-size: 3.5rem;
+  margin-bottom: 15%;
+}
+
+.firstDiv .startBtn {
+  width: 150px;
+  height: 50px;
+  background-color: #f99898;
+  border: none;
+  font-size: 1.3rem;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.firstDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/main.jpg") no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.secondDiv {
+  display: flex;
+  flex-direction: row; 
+  background: #444;
+  justify-content: space-between; 
+  overflow: hidden;
+}
+
+/* Left section */
+.left-section,
+.right-section {
+  flex: 1; 
+  padding: 20px;
+  box-sizing: border-box; 
+  overflow: hidden;
+  
+}
+
+.left-section img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.secondDiv .right-section {
+  padding-left: 5%; 
+  text-align: left; 
+}
+
+.secondDiv h2,
+.secondDiv h4 {
+  padding: 20px;
+}
+
+.thirdDiv {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0;
+  justify-items: center;
+  align-content: start;
+  margin-top: 13%;
+}
+
+.thirdDiv h2 {
+  text-align: center;
+  bottom: 65%;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  position: relative; 
+  z-index: 2; 
+}
+
+.thirdDiv .imageSection {
+  width: 100%;
+  padding-bottom: 75%;
+  position: relative;
+  overflow: hidden;
+}
+
+.thirdDiv .imageSection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thirdDiv .imageSection h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 15px 0 5px;
+  font-size: 1.2rem;
+  padding: 0;
+}
+
+.nav-list,
+.nav-member {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.nav-member {
+  margin-left: auto;
+}
+
+nav .second-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-member {
+  margin-left: 20px; 
+}
+
+footer {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* 로그인 폼 */
+
+.login {
+  width: 400px;
+  padding: 0;
+  margin: auto;
+}
+.form {
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+
+
+/* 숨김처리용 */
+.hidden {
+  display: none;
+}
+

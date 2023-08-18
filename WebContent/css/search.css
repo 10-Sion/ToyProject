@@ -1,0 +1,44 @@
+.main {
+    margin: 20px;
+    text-align: center;
+}
+.searchBtn {
+    color: white;
+}
+
+.input_text {
+    border: 2.5px solid gray;
+    width: 200px;
+    height: 40px;
+}
+.Button {
+    border: 0.2px solid black;
+    width: 50px;
+    height: 40px;
+    background: gray;
+}
+
+.map{  
+	max-width: 80%;  
+	max-height: 80%;  
+	left: 0;  
+	right: 0;  
+	top: 0;  
+	bottom: 0;  
+	margin: auto;  
+	overflow: auto;  
+	position: fixed;  
+}
+
+a{
+	text-decoration-line: none;
+}
+
+.search {
+	color: black;
+	top: 80px;
+	position: relative;
+	left: 500px;
+}
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 상단 메뉴바 css 연결 -->
+<link rel="stylesheet" href="css/top.css">
+
+<!-- 검색창 css 연결 -->
+<link rel="stylesheet" href="css/search.css">
+
+
+
+
+</head>
+
+<body>
+
+<!-- 상단 메뉴바 -->
+    <div class="menu" >
+      <nav class="clearfix">
+        <ul class="clearfix">
+          <li><a href="#">찜하기</a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
+          <li><a href="#">공유</a></li>
+          <li><a href="#">일정 추가</a></li>
+          <li><a href="#">메모</a></li>
+      </ul>
+      <a id="pull" href="#"></a>
+    </nav>
+    </div>
+    
+    <!-- 검색창 -->
+   <div class="search">
+        <form id="searchForm">
+            <input id="query" class="input_text" name="query" type="search" placeholder="검색할 지역 또는 구,동을 입력하세요.">
+            <button class="Button" type="button" onclick="openMyPage()"><div class="searchBtn">검색</div></button>
+        </form>
+    </div>
+
+    <script src="js/modal.js"></script>
+  
+  <!-- 지도사진 (임의) -->
+    <img alt="HTML" src="map.png">
+    
+    <!-- 모달창 -->
+   
+    
+  </body>
+</html>

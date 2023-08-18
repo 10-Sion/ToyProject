@@ -79,3 +79,75 @@ $(document).ready(function () {
     $('.item-details .item').eq(index).show();
   });
 });
+
+//  마이페이지 슬라이더 처리
+$(document).ready(function () {
+  // 슬라이더 초기화 함수
+  function initializeSlider($sliderUl) {
+    const slideCount = $sliderUl.find('li').length;
+    const slideWidth = $sliderUl.find('li').width();
+    const sliderUlWidth = slideCount * slideWidth;
+
+    // 처음 슬라이드(1번 위치)로 이동
+    $sliderUl.css({ width: sliderUlWidth, marginLeft: 0 });
+
+    function moveLeft() {
+      $sliderUl.animate(
+        {
+          left: +slideWidth,
+        },
+        200,
+        function () {
+          $sliderUl.find('li:last-child').prependTo($sliderUl);
+          $sliderUl.css('left', '');
+          // 여기에 화면 이동 등 추가 작업 가능
+        }
+      );
+    }
+
+    function moveRight() {
+      $sliderUl.animate(
+        {
+          left: -slideWidth,
+        },
+        200,
+        function () {
+          $sliderUl.find('li:first-child').appendTo($sliderUl);
+          $sliderUl.css('left', '');
+          // 여기에 화면 이동 등 추가 작업 가능
+        }
+      );
+    }
+
+    $sliderUl.parent().find('a.control_prev').off('click').on('click', function () {
+      moveLeft();
+      return false; // 이동 버튼 클릭 시 링크 이동 방지
+    });
+
+    $sliderUl.parent().find('a.control_next').off('click').on('click', function () {
+      moveRight();
+      return false; // 이동 버튼 클릭 시 링크 이동 방지
+    });
+  }
+
+  $('.data-item').click(function () {
+    const index = $(this).index('.data-item');
+
+    // 기존의 .item-details 내용 초기화
+    $('.item-details .slider').hide();
+
+    // 선택된 섹션의 슬라이더만 표시
+    const sliderId = ['#saved-list', '#memo-list', '#shared-list'][index];
+    const $slider = $(sliderId + ' .slider');
+    $slider.show();
+
+    // 슬라이더 초기화 및 이벤트 핸들러 등록
+    const $sliderUl = $slider.find('ul');
+    initializeSlider($sliderUl);
+
+    // 슬라이더가 표시된 후에 해당 섹션으로 스크롤
+    $('html, body').animate({
+      scrollTop: $slider.offset().top
+    }, 500);
+  });
+});

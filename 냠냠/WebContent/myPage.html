@@ -8,6 +8,25 @@
   <title>Document</title>
 </head>
 <body>
+  <!-- 사이드 메뉴 -->
+  <ul class="menu">
+
+    <li title="home"><a href="#" class="menu-button home">menu</a></li>
+    
+    <li title="검색"><a href="#" class="search">검색</a></li>
+    <li title="메모하기"><a href="#" class="pencil">메모하기</a></li>
+    <li title="마이페이지"><a href="myPage.html" class="active about">마이페이지</a></li>
+    <li title="찜 목록"><a href="#" class="archive">찜 목록</a></li>
+  </ul>
+  
+  <ul class="menu-bar">
+      <li><a href="#" class="menu-button">Menu</a></li>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="main.html">메인</a></li>
+      <li><a href="myPage.html">마이페이지</a></li>
+      <li><a href="#">공유하기</a></li>
+  </ul>
+
   <div class="content">
     <div class="user-page">
       <div class="user-img">
@@ -27,19 +46,115 @@
 
         <div class="item-details">
           <ul class="item-list">
+            
             <!-- 저장 목록 -->
-            <li class="item">
-              a
+            <li class="item" id="saved-list">
+              <div class="slider">
+                <a href="#" class="control_next">다음</a>
+                <a href="#" class="control_prev">이전</a>
+                <ul>
+                  <li>
+                    <div class="slide-section">
+                      <div class="left-section">
+                        <img src="https://a.cdn-hotels.com/gdcs/production161/d1403/b5f1876a-9e64-4d13-ab7a-a0fd2cbc5224.jpg">
+                        LEFT 1-1</div>
+                      <div class="right-section">
+                        <img src="https://www.yangju.go.kr/DATA/bbs/206/201912230411581159e8FJO.jpg">
+                        RIGHT 1-1</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="slide-section">
+                      <div class="left-section">
+                        <img src="https://cdn.traveltimes.co.kr/news/photo/202109/113022_11185_1829.jpg">
+                        LEFT 1-2</div>
+                      <div class="right-section">
+                        <img src="https://cdn.foodnews.co.kr/news/photo/202006/74316_31142_1917.jpg">
+                        RIGHT 1-2</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="slide-section">
+                      <div class="left-section">
+                        <img src="https://m.young.hyundai.com:444/upload/CMS_NEWS_IMAGE/2020/10/22/CMS_NEWS_IMAGE_Q0t8p6urFXhUaqTGv71c.png">
+                        LEFT 1-3</div>
+                      <div class="right-section">
+                        <img src="https://www.gyeongju.go.kr/upload/content/thumb/20201228/5DE22B6931D74EF9B333A081342A41F4.jpg">
+                        RIGHT 1-3</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="slide-section">
+                      <div class="left-section">
+                        <img src="https://www.kkday.com/ko/blog/wp-content/uploads/jeju_cafe_mangoholic_1.jpg">
+                        LEFT 1-4</div>
+                      <div class="right-section">
+                        <img src="https://www.sagabai.com/taxfree/site_files/image/restaurant/restaurant_01.jpg">
+                        RIGHT 1-4</div>
+                    </div>
+                  </li>
+                </ul>  
+              </div>
             </li>
+
             <!-- 메모 목록 -->
-            <li class="item">
-              b
+            <li class="item" id="memo-list">
+              <div class="slider">
+                <a href="#" class="control_next">다음</a>
+                <a href="#" class="control_prev">이전</a>
+                <ul>
+                  <li>
+                    <div class="card">
+                      <a href="음식점1 링크">
+                        <img src="https://d2v80xjmx68n4w.cloudfront.net/gigs/rate/YGKtk1548316958.png" /></a>
+                      <h3>음식점 1</h3>
+                      <p>음식점 메모</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card">
+                      <a href="음식점2 링크">
+                        <img src="https://cglink.com/files/attach/images/2291/635/661/a9a7ea055b072f7cf3e6e4d671e60c74.jpg" /></a>
+                      <h3>음식점 2</h3>
+                      <p>음식점 메모</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card">
+                      <a href="음식점3 링크">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvWN6FLgG2lpiFwoT3zNUq9FMCyZiyaXXbA&usqp=CAU" /></a>
+                      <h3>음식점 3</h3>
+                      <p>음식점 메모</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card">
+                      <a href="음식점4 링크">
+                        <img src="https://www.urbanbrush.net/web/wp-content/uploads/edd/2021/07/urbanbrush-20210720213004046257.jpg" /></a>
+                      <h3>음식점 4</h3>
+                      <p>음식점 메모</p>
+                    </div>
+                  </li>
+                </ul>  
+              </div>
             </li>
+
             <!-- 공유 일정 -->
-            <li class="item">
-              c
+            <li class="item" id="shared-list">
+              <div class="slider">
+                <a href="#" class="control_next">다음</a>
+                <a href="#" class="control_prev">이전</a>
+                <ul>
+                  <li>SLIDE 3-1</li>
+                  <li>SLIDE 3-2</li>
+                  <li>SLIDE 3-3</li>
+                  <li>SLIDE 3-4</li>
+                </ul>  
+              </div>
             </li>
+
           </ul>
+
         </div>
       </div>
     </div>

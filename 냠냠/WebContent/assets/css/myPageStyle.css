@@ -105,3 +105,24 @@ body {
 .user-page .data-user li a:hover span {
   color: #f69d66; 
 }
+
+.user-page .item-details {
+  display: none; /* 초기에는 세부 내용 숨김 */
+}
+
+.user-page .item-list {
+  margin-top: 1em;
+  padding: 0;
+  list-style: none;
+}
+
+.user-page .item-list .item {
+  padding: 1em;
+  border: 1px solid #ccc;
+  margin-top: 1em;
+  background-color: #f7f7f7;
+}
+
+.user-page .item-list .item h3 {
+  margin-top: 0;
+}

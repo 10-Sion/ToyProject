@@ -6,7 +6,7 @@ const $form = $('.form');
 //  로그인창 클릭 시 나타남
 $loginBtn.on('click', () => {
   toggleHidden($loginPage);
-  showLoginForm();
+  showLoginForm();  
 });
 
 // Register 버튼 클릭 시 나타남

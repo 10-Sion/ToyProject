@@ -28,11 +28,15 @@
     <div class="login hidden">
       <div class="form">
         <div class="sns-login">
-          
+
               <a class="kakao-loginBtn" href="https://kauth.kakao.com/oauth/authorize?client_id={RestAPI키 입력하면됨}&response_type=code&redirect_uri={redirectURI 입력하면됨}">
                 <img src="assets/imgs/kakao_login_small.png">
               </a>
+              <a class="instagram-loginBtn" href="https://api.instagram.com/oauth/authorize?client_id={app-id}&redirect_uri={redirect-uri}&scope=user_profile,user_media&response_type=cod">
+                <img id="instagram-logo" src="assets/imgs/instagram-logo.png">
+              </a>
 
+              <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div>
         </div>
 
         <form class="register-form">
@@ -106,6 +110,8 @@
     나는 푸터
   </footer>
 
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v17.0&appId=836415401028629&autoLogAppEvents=1" nonce="9dqsF3Eb"></script>
   <script src="app.js"></script>
 </body>
 </html>

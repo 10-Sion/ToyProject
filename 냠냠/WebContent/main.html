@@ -1,31 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <link rel="stylesheet" href="assets/css/mainStyle.css">
-  <title>Document</title>
-</head>
-<body>
-  <ul class="menu">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
 
-    <li title="home"><a href="#" class="menu-button home">menu</a></li>
-    
-    <li title="검색"><a href="#" class="search">검색</a></li>
-    <li title="메모하기"><a href="#" class="pencil">메모하기</a></li>
-    <li title="마이페이지"><a href="myPage.html" class="active about">마이페이지</a></li>
-    <li title="찜 목록"><a href="#" class="archive">찜 목록</a></li>
-  </ul>
-  
-  <ul class="menu-bar">
-      <li><a href="#" class="menu-button">Menu</a></li>
-      <li><a href="index.html">홈</a></li>
-      <li><a href="main.html">메인</a></li>
-      <li><a href="myPage.html">마이페이지</a></li>
-      <li><a href="#">공유하기</a></li>
-  </ul>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/mainStyle.css" />
+  </head>
 
-  <script src="app.js"></script>
-</body>
+  <body>
+    <!-- 상단 메뉴 -->
+    <header class="header">
+      <a href="" class="logo">Home</a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="#work">Choice</a></li>
+        <li><a href="#about">Plan</a></li>
+        <li><a href="#careers">Memo</a></li>
+        <li><a href="#contact">My page</a></li>
+      </ul>
+    </header>
+
+    <!-- 검색 창 -->
+    <div class="wrap">
+      <div class="search">
+        <input
+          type="text"
+          class="searchTerm"
+          placeholder="검색할 지역 또는 구, 동을 입력하세요."
+        />
+        <button type="submit" class="searchButton">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- 중간 -->
+    <div class="box-total">
+      <div class="box-container">
+        <div class="box left-box">
+          <div class="content">
+            <h2>왼쪽 박스</h2>
+            <p>여기에 지도 삽입.</p>
+          </div>
+        </div>
+        <div class="box right-box">
+          <div class="content">
+            <h2>오른쪽 박스</h2>
+            <p>여기에 메뉴 리스트.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

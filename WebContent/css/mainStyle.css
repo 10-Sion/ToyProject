@@ -1,3 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #FF7F50; /* 옅은 빨간색으로 변경 */
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #f56e69;
+}
+
+.searchTerm:focus {
+  color: #f56e69;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #f56e69;
+  background: #f56e69;
+  text-align: center;
+  color: #f56e69;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*위치 조정*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: calc(50% - 270px);
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.box-total {
+  margin: 0;
+  padding-top: 150px; /* 상단에서 100px 띄우기 */
+  display: flex;
+  flex-direction: column; /* 아래로 정렬하기 */
+  background-color: #f0f0f0;
+
+}
+
+.box-container {
+  display: flex;
+  gap: 20px; /* 박스 사이에 20px 간격 띄우기 */
+}
+
+.box {
+  width: 200px; /* 너비 설정 */
+  height: 500px; /* 높이 설정 */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left-box {
+  flex: 6; /* 왼쪽 박스의 너비 비율 설정 */
+  border-radius:20px 20px 20px 20px; /* 왼쪽 박스의 끝을 둥글게 처리 */
+}
+
+.right-box {
+  flex: 4; /* 오른쪽 박스의 너비 비율 설정 */
+  border-radius: 20px 20px 20px 20px; /* 오른쪽 박스의 끝을 둥글게 처리 */
+}
+
+.content {
+  text-align: center;
+  padding: 20px;
+}
+
 body {
   margin: 0;
   font-family: Helvetica, sans-serif;

@@ -8,12 +8,16 @@ const $forgotPasswordForm = $('.forgot-password-form');
 $loginBtn.on('click', () => {
   toggleHidden($loginPage);
   showLoginForm();
+
+  scrollToForm($loginPage);
 });
 
 // Register 버튼 클릭 시 나타남
 $registerBtn.on('click', () => {
   toggleHidden($loginPage);
   showRegisterForm();
+
+  scrollToForm($loginPage);
 });
 
 // 비밀번호 찾기 버튼 클릭 시 나타남
@@ -42,8 +46,6 @@ $('.message a').click(function () {
   }
 });
 
-
-
 // 로그인 창 block 상태에서 다른 영역 클릭 시 숨김처리
 $(document).on('click', (e) => {
   if (
@@ -65,7 +67,7 @@ $(window).scroll(() => {
       {
         top: position + 200 + 'px',
       },
-      550
+      500
     );
   }
 });
@@ -135,6 +137,16 @@ function showRegisterForm() {
   $('.register-form').show(500);
   $('.login-form').hide();
   $('.forgot-password-form').hide();
+}
+
+// 로그인 폼으로 스크롤하는 함수
+function scrollToForm($form) {
+  $('html, body').animate(
+    {
+      scrollTop: $form.offset().top,
+    },
+    500
+  );
 }
 
 //  마이페이지 리스트 분류 처리
@@ -231,3 +243,30 @@ $(document).ready(function () {
     );
   });
 });
+
+// 스크롤 시 내비게이션 바의 상단고정
+$(document).ready(function () {
+  const $nav = $('nav');
+  const navOffset = $nav.offset().top;
+  let isNavFixed = false;
+
+  $(window).scroll(function () {
+    const scrollPos = $(window).scrollTop();
+
+    if (scrollPos >= navOffset && !isNavFixed) {
+      $nav.addClass('fixed-nav');
+      
+      isNavFixed = true;
+    } 
+    
+    // 스크롤 위치가 최상단일 때 초기 스타일로
+    else if (scrollPos === 0 && isNavFixed) {
+      $nav.removeClass('fixed-nav');
+      isNavFixed = false;
+    }
+  });
+});
+
+
+
+

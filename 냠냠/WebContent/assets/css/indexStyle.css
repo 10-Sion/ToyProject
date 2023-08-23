@@ -209,20 +209,28 @@ footer {
   font-size: 14px;
 }
 
-.form .sns-login {
+.sns-login {
   margin-bottom: 20px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.kakao-loginBtn, 
+.instagram-loginBtn {
+  padding-right: 35px;
+}
+
+.kakao-loginBtn {
+  padding-top: 3px;
 }
 
 #instagram-logo {
-  width: 50px;
+  width: 35px;
 }
 
-.fb-login-button {
-  margin-left: 30px;
-  bottom: 10px;
-}
 
-.form button {
+.form button, .form input[type="submit"] {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -236,14 +244,16 @@ footer {
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
+.form button:hover,.form button:active,.form button:focus,
+.form submit:hover,.form submit:active,.form submit:focus {
   background: #43A047;
 }
 .form .message {
-  margin: 15px 0 0;
+  padding: 30px 0px 0px;
   color: #b3b3b3;
-  font-size: 12px;
+  font-size: 0.8rem;
 }
+
 .form .message a {
   color: #4CAF50;
   text-decoration: none;
@@ -275,6 +285,16 @@ footer {
   color: #EF3B3A;
 }
 
+.forgot-password-form {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 45px;
+  text-align: center;
+}
+
+.forgot-password-form h2 {
+  padding-bottom: 30px;
+}
 
 /* 숨김처리용 */
 .hidden {

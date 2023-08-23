@@ -33,25 +33,37 @@
                 <img src="assets/imgs/kakao_login_small.png">
               </a>
               <a class="instagram-loginBtn" href="https://api.instagram.com/oauth/authorize?client_id={app-id}&redirect_uri={redirect-uri}&scope=user_profile,user_media&response_type=cod">
-                <img id="instagram-logo" src="assets/imgs/instagram-logo.png">
+                <img id="instagram-logo" src="assets/imgs/insta-logo.png">
               </a>
-
-              <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div>
         </div>
 
-        <form class="register-form">
-          <input type="text" placeholder="name"/>
-          <input type="password" placeholder="password"/>
-          <input type="text" placeholder="email address"/>
-          <button>create</button>
+        <!-- 회원가입 폼 -->
+        <form class="register-form" onsubmit="return validateForm()">
+          <input type="text" id="registerName" placeholder="name"/>
+          <input type="password" id="registerPW" placeholder="password"/>
+          <input type="text" id="registerEmail" placeholder="email address"/>
+          <input type="submit" value="Create"></input>
           <p class="message">이미 가입하셨나요? <a href="#">로그인</a></p>
         </form>
+        <!-- 로그인 폼 -->
         <form class="login-form">
           <input type="text" placeholder="username"/>
           <input type="password" placeholder="password"/>
           <button>login</button>
-          <p class="message">아직 가입하지 않으셨나요? <a href="#">새 계정 만들기</a></p>
+          <p class="message">
+            아직 가입하지 않으셨나요? <a href="#">새 계정 만들기</a> <br><br>
+            비밀번호를 잊으셨나요? <a href="#" class="forgot-password-link">비밀번호 찾기</a>
+          </p>
+          
         </form>
+        <!-- 비밀번호 찾기 폼 -->
+        <form class="forgot-password-form hidden">
+          <h2>비밀번호 찾기</h2>
+          <input type="text" id="forgotEmail" placeholder="등록한 이메일 주소를 입력하세요"/>
+          <input type="submit" value="비밀번호 재설정"></input>
+          <p class="message"><a href="#" id="backToLogin">로그인</a></p>
+        </form>
+
       </div>
     </div>
 
@@ -110,8 +122,6 @@
     나는 푸터
   </footer>
 
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v17.0&appId=836415401028629&autoLogAppEvents=1" nonce="9dqsF3Eb"></script>
   <script src="app.js"></script>
 </body>
 </html>

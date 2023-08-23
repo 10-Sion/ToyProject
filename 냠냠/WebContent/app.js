@@ -9,7 +9,9 @@ $loginBtn.on('click', () => {
   toggleHidden($loginPage);
   showLoginForm();
 
-  scrollToForm($loginPage);
+  if ($(window).scrollTop() != 0) { // 최상단 위치일 때만 이동
+    scrollToForm($loginPage);
+  }
 });
 
 // Register 버튼 클릭 시 나타남
@@ -17,7 +19,9 @@ $registerBtn.on('click', () => {
   toggleHidden($loginPage);
   showRegisterForm();
 
-  scrollToForm($loginPage);
+  if ($(window).scrollTop() != 0) { // 최상단 위치일 때만 이동
+    scrollToForm($loginPage);
+  }
 });
 
 // 비밀번호 찾기 버튼 클릭 시 나타남
@@ -65,7 +69,7 @@ $(window).scroll(() => {
   if (!$loginPage.hasClass('hidden')) {
     $form.stop().animate(
       {
-        top: position + 200 + 'px',
+        top: position +200+ 'px',
       },
       500
     );
@@ -265,6 +269,31 @@ $(document).ready(function () {
       isNavFixed = false;
     }
   });
+});
+
+//  이미지 페이드인 효과 처리 
+$(document).ready(function () {
+  const $image = $('.secondDiv img');
+  const windowHeight = $(window).height();
+
+  $(window).scroll(function () {
+    const scrollPos = $(window).scrollTop();
+    const imageTop = $image.offset().top;
+    const imageBottom = imageTop + $image.height();
+
+    if (scrollPos + windowHeight < imageTop || scrollPos > imageBottom) {
+      // 페이드아웃
+      $image.stop().animate({ opacity: 0 }, 300);
+    } else {
+      // 페이드인
+      $image.stop().animate({ opacity: 1 }, 300);
+    }
+  });
+
+  // 페이지 로드 시에도 이미지 페이드아웃
+  if ($(window).scrollTop() === 0) {
+    $image.css({ opacity: 0 });
+  }
 });
 
 
